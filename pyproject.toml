@@ -1,8 +1,7 @@
-
 [tool.poetry]
-name = "Sync User"
+name = "Synv-USer"
 version = "0.1.0"
-description = "This function should sync user."
+description = "Assigning user to me"
 authors = ["Yapit AI <you <yapit@yapit.ai>>"]
 
 [tool.poetry.dependencies]
@@ -18,7 +17,7 @@ scikit-learn = "^1.5.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2"
-black = black = {version = "^24.3", allow-prereleases = true}
+black = {version = "^24.3", allow-prereleases = true}
 autopep8 = "^2.0.0"
 ipdb = "^0.13.0"
 pylint = "^3.0.0"
@@ -35,6 +34,15 @@ build-backend = "poetry.masonry.api"
 
 [tool.black]
 line-length = 88
-target-version = [py39, py310, py311]
-include = .pyi?
-
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+  \.toml
+  |\.sh
+  |\.git
+  |\.ini
+  |Dockerfile
+  |Jenkinfile
+)/
+'''
