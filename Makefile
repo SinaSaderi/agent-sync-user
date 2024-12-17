@@ -28,7 +28,6 @@ install: generate_dot_env
 	pip install --upgrade pip
 	pip install setuptools wheel --upgrade
 	pip install poetry
-	poetry lock --no-update
 	poetry install --with dev
 
 run:
